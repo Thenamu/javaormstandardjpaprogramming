@@ -1,9 +1,11 @@
 ## 📓 INDEX
 
 ### 개념
-- [JPA란?]()
-- [Spring이 없는 JPA]()
-- [JPQL]()
+- [JPA란?](https://github.com/Thenamu/javaormstandardjpaprogramming/blob/a12bf47ec3c5faa5e13bb1cb446dfa1444f04461/1.%EA%B0%9C%EB%85%90/JPA%EB%9E%80.md)
+- [Spring이 없는 JPA](https://github.com/Thenamu/javaormstandardjpaprogramming/blob/a12bf47ec3c5faa5e13bb1cb446dfa1444f04461/1.%EA%B0%9C%EB%85%90/Spring%EC%97%86%EB%8A%94JPA.md)
+- [JPQL](https://github.com/Thenamu/javaormstandardjpaprogramming/blob/a12bf47ec3c5faa5e13bb1cb446dfa1444f04461/1.%EA%B0%9C%EB%85%90/JPQL.md)
+
+<br/>
 
 # JPA - Java Persistence API
 
@@ -28,10 +30,14 @@ JPA에서는 객체와 테이블을 잘 설계하고 정확하게 매핑하는 �
 | 객체와 테이블을 제대로 설계 | 객체와 테이블을 제대로 설계하고 매핑하는 방법 |
 | 기본 키과 외래 키 매핑     | 1:N, N:1, 1:1, N:M 매핑                   |
 
+<br/>
+
 ## JPA 내부 동작 방식 이해
 
 JPA가 어떤 SQL을 만들어 내는지 이해  
 JPA가 언제 SQL을 실행하는지 이해
+
+<br/>
 
 ## JPA와 모던 자바 데이터 저장 기술
 
@@ -60,6 +66,8 @@ JPA가 언제 SQL을 실행하는지 이해
 예시로 회원을 DB에 저장하려고 하면 회원 객체를 SQL로 변환해야 하고 조회할 때도 SQL로 조회한 다음에 그걸 객체로 변환해야 한다
 
 개발자가 결국 SQL 매퍼의 일을 하게 된다
+
+<br/>
 
 ## 객체와 관계형 데이터베이스의 차이
 
@@ -116,6 +124,8 @@ class MemberService {
 }
 ```
 
+<br/>
+
 ## memberDAO의 find메소드를 확인해봐야 한다
 
 다음 계층을 개발자가 코드를 들어가서 확인해봐야 한다.  
@@ -137,6 +147,8 @@ class MemberService {
 결국 계층형 아키텍처, 진정한 의미의 **계층분할**이 어렵다.  
 물리적으로는 분할이 되어 있으나 논리적으로는 엮여 있다.
 
+<br/>
+
 ## 비교하기
 
 ### 객체 비교
@@ -148,9 +160,6 @@ Member member2 = memberDAO.getMember(memberId);
 
 member1 == member2; // 인스턴스 비교는 다르다
 ```
-
-## MemberDAO 클래스
-
 ```java
 class MemberDAO {
     public Member getMember(String memberId) {
@@ -161,7 +170,9 @@ class MemberDAO {
 }
 ```
 
-# 비교하기 - 자바 컬렉션에서 조회
+<br/>
+
+## 비교하기 - 자바 컬렉션에서 조회
 
 ```java
 String memberId = "100";
@@ -170,6 +181,8 @@ Member member2 = list.get(memberId);
 
 member1 == member2; // 같다
 ```
+
+<br/>
 
 # 객체 지향 모델링과 JPA
 
